@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="149FM Underground Radio - Sunet alternativ, non-stop, pentru nopți lungi">
+  <title>149FM • Underground Radio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">149FM</div>
+        <nav>
+          <a href="#player">LIVE</a>
+          <a href="#playlist">PLAYLIST</a>
+          <a href="#schedule">PROGRAM</a>
+          <a href="#about">DESPRE</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-player" id="player">
+      <div class="container">
+        <div class="station-status">
+          <div class="live-dot"></div>
+          <span>LIVE • Underground Radio</span>
+        </div>
+        
+        <h1 class="hero-title">SUNET ALTERNATIV</h1>
+        <p class="hero-subtitle">Non-stop, pentru nopți lungi</p>
+        
+        <div class="player-card">
+          <div class="now-playing">
+            <div class="now-playing-label">ON AIR NOW</div>
+            <div class="track-info" id="currentTrack">Loading...</div>
+            <div class="track-artist" id="currentArtist">149FM Radio</div>
+          </div>
+          
+          <div class="waveform" id="waveform"></div>
+          
+          <div class="player-controls">
+            <button class="play-button" id="playButton">▶</button>
+            <div class="volume-control">
+              <span>🔊</span>
+              <input type="range" id="volumeSlider" min="0" max="100" value="70">
+            </div>
+          </div>
+          
+          <audio id="audioPlayer" preload="none">
+            <source src="https://stream.zeno.fm/6vc4ddpr3ehvv" type="audio/mpeg">
+          </audio>
+          
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="listeners">247</div>
+              <div class="stat-label">Listeners</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="bitrate">128 kbps</div>
+              <div class="stat-label">Quality</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="uptime">24/7</div>
+              <div class="stat-label">Uptime</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="playlist">
+      <div class="container">
+        <h2 class="section-title">RECENT TRACKS</h2>
+        <div class="playlist-grid" id="playlistGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="schedule">
+      <div class="container">
+        <h2 class="section-title">PROGRAM</h2>
+        <div class="schedule-grid" id="scheduleGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">DESPRE NOI</h2>
+        <div class="about-content">
+          <p>149FM Radio oferă sunet alternativ, non-stop, pentru nopți lungi. Scopul nostru este să aducem muzică de calitate și emisiuni creative, să susținem scena underground și să construim o comunitate.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">FB</a>
+        <a href="https://www.instagram.com/149fm.radio/" target="_blank" aria-label="Instagram">IG</a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">TW</a>
+      </div>
+      <p>© 2025 149FM Underground Radio • Sunet alternativ, non-stop</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
