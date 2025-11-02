@@ -34,3 +34,9 @@ jobs:
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           script: |
             sudo nginx -t && sudo nginx -s reload
+- name: Add host to known_hosts
+  run: |
+    mkdir -p ~/.ssh
+    HOST_RAW='${{ secrets.DEPLOY_HOST }}'
+    HOST_CLEAN=$(echo "$HOST_RAW" | sed 's~^https\?://~~; s~/.*$~~')
+    ssh-keyscan -H "$HOST_CLEAN" >> ~/.ssh/known_hosts
